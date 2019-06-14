@@ -9,17 +9,17 @@ NOTICE='[33m'
 RESET='[0m'
 
 echo -e "\e${TITLE} -=Setup SOLR Demo=- \e${RESET}"
-echo -e "\e${TITLE} --Prep \e${RESET}"
-#apt-get update
+echo -e "\e${TITLE} --Updating Ubuntu \e${RESET}"
+apt-get update
 
 echo -e "\e${TITLE} --Downloading SOLR \e${RESET}"
-#mkdir /solr
-#wget -nd http://apache.mirrors.tds.net/lucene/solr/8.1.1/solr-8.1.1.tgz -P /solr
+mkdir /solr
+wget -nd http://apache.mirrors.tds.net/lucene/solr/8.1.1/solr-8.1.1.tgz -P /solr
 echo -e "\e${TITLE} --Unpacking SOLR \e${RESET}"
-#tar -zxvf /solr/solr-8.1.1.tgz
+tar -zxvf /solr/solr-8.1.1.tgz
 
 echo -e "\e${TITLE} --Installing Java \e${RESET}"
-#apt-get install default-jdk -y
+apt-get install default-jdk -y
 
 echo -e "\e${TITLE} --Starting SOLR \e${RESET}"
 /solr/solr-8.1.1/bin/solr start -e cloud -noprompt -force
