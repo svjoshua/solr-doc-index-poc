@@ -9,5 +9,5 @@ RESET='[0m'
 
 echo -e "\e${TITLE} -=Configure Security=- \e${RESET}"
 echo -e "\e${TITLE} --Updating \e${RESET}"
-cp /sv/limits.conf /etc/security/limits.confcd
+cp /sv/limits.conf /etc/security/limits.conf
 echo -e "\e${TITLE} -=Security Config Complete=- \e${RESET}"
