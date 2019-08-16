@@ -16,7 +16,7 @@ echo -e "\e${TITLE} --Downloading SOLR \e${RESET}"
 mkdir /solr
 wget -nd https://archive.apache.org/dist/lucene/solr/8.1.1/solr-8.1.1.tgz -P /solr
 echo -e "\e${TITLE} --Unpacking SOLR \e${RESET}"
-tar -zxvf /solr/solr-8.1.1.tgz
+tar -zxvf /solr/solr-8.1.1.tgz --directory /solr
 
 echo -e "\e${TITLE} --Installing Java \e${RESET}"
 apt-get install default-jdk -y
