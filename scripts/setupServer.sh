@@ -24,7 +24,7 @@ apt-get install default-jdk -y
 echo -e "\e${TITLE} --Starting SOLR \e${RESET}"
 /solr/solr-8.1.1/bin/solr start -e cloud -noprompt -force
 echo -e "\e${TITLE} --Building Collection \e${RESET}"
-/solr/solr-8.1.1/bin/solr create -c docIndex -s 2 -rf 2
+/solr/solr-8.1.1/bin/solr create -c docIndex -s 2 -rf 2 -force
 echo -e "\e${TITLE} --Indexing Documents \e${RESET}"
 /solr/solr-8.1.1/bin/post -c docIndex /sv/docs
 
